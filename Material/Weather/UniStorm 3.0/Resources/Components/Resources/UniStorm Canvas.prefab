@@ -1464,7 +1464,6 @@ GameObject:
   - component: {fileID: 3825458021065968236}
   - component: {fileID: 4005949454115550310}
   - component: {fileID: 4005676660902085164}
-  - component: {fileID: 876052957325257549}
   - component: {fileID: 3738189372041846606}
   m_Layer: 5
   m_Name: UniStorm Canvas
@@ -1560,20 +1559,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &876052957325257549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3893928030329224436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b33c6815a7a001d41a5ace06783bf799, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eqSlider: {fileID: 1526692249070266279}
-  House1: {fileID: 0}
 --- !u!114 &3738189372041846606
 MonoBehaviour:
   m_ObjectHideFlags: 0

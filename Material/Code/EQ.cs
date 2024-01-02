@@ -6,10 +6,6 @@ using UnityEngine.UI;
 
 public class EQ : MonoBehaviour
 {
-	// My add
-	// 引用Slider
-	// public Canvas earthquakeCanvas;
-
 	public static EQ thisC;
 	//震动级别
 	public float level = 0f;
@@ -47,10 +43,7 @@ public class EQ : MonoBehaviour
 		{
 			listAttachC.Add(loopAttachC);
 		}
-		// My add 
-		// 初始化Canvas引用
-		// earthquakeCanvas = GameObject.Find("YourCanvasName").GetComponent<Canvas>();
-		// 其他代码保持不变
+
 	}
 	private void Update()
 	{
@@ -173,16 +166,7 @@ public class EQ : MonoBehaviour
 		}
 	}
 
-
-
-	// My add
-
-
 	// 添加一个方法来关闭Canvas
-	// public void CloseCanvas()
-	// {
-	// 	earthquakeCanvas.gameObject.SetActive(false);
-	// }
 	public void SetLevelFromSlider(float sliderValue)
 	{
 		level = sliderValue;
