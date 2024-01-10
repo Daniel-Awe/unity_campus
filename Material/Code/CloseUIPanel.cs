@@ -5,20 +5,18 @@ using UnityEngine.UI;
 
 public class CloseUIPanel : MonoBehaviour
 {
-    public Canvas canvas; // 引用Canvas组件
+    public Canvas canvas;
 
     void Start()
     {
-        // 获取Canvas组件，确保在Inspector中将Canvas分配给这个变量
         if (canvas == null)
         {
             Debug.LogError("Canvas reference not set in the inspector!");
         }
     }
 
-    // 由按钮调用的方法，用于关闭Canvas
     public void CloseCanvas()
     {
-        canvas.gameObject.SetActive(false); // 关闭Canvas
+        canvas.gameObject.SetActive(false);
     }
 }

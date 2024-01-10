@@ -7,23 +7,33 @@ using UnityEngine.UI;
 public class SliderControll : MonoBehaviour
 {
 
-    public Slider eqSlider;  // 引用Slider组件
-    public GameObject House1;  // 引用House1物体
+    public Slider eqSlider;
+    public GameObject House1;
+    public GameObject House2;
+    public GameObject House3;
+    public GameObject House4;
 
-    private EQ eqComponent;  // 用于保存House1上的EQ组件
-
-    void Start()
+    private void Start()
     {
-        eqComponent = House1.GetComponent<EQ>();  // 获取House1上的EQ组件
-        eqSlider.onValueChanged.AddListener(UpdateEQLevel);  // 添加滑动条值改变的监听器
-        Debug.Log("onValueChanged event added to Slider." + eqComponent.level);
+        eqSlider.onValueChanged.AddListener(UpdateEQLevel);
+        Debug.Log("onValueChanged event added to Slider. Initial EQ Level: " + House1.GetComponent<EQ>().level);
     }
 
-
-    // 当Slider值改变时调用的方法
     void UpdateEQLevel(float value)
     {
-        eqComponent.level = value;  // 更新EQ组件中的Level值
-        Debug.Log("EQ Level: " + eqComponent.level);  // 输出到控制台
+        SetEQLevel(House1, value);
+        SetEQLevel(House2, value);
+        SetEQLevel(House3, value);
+        SetEQLevel(House4, value);
+        Debug.Log("EQ Level: " + House1.GetComponent<EQ>().level);
+    }
+
+    void SetEQLevel(GameObject house, float value)
+    {
+        EQ eqComponent = house.GetComponent<EQ>();
+        if (eqComponent != null)
+        {
+            eqComponent.level = value;
+        }
     }
 }
