@@ -131,7 +131,7 @@ public class PlayFabAuth : MonoBehaviour
     // 失败的回调
     private void OnFail(PlayFabError error)
     {
-        Debug.LogError(error.GenerateErrorReport());
+        //Debug.LogError(error.GenerateErrorReport());
         feedbackText.text = "操作错误：" + error.ErrorMessage; // 5秒后隐藏反馈文本
     }
 
